@@ -30,22 +30,19 @@ int main()
   end = chrono::steady_clock::now(); 
   diff = end - start;
   
+
+ 
   cout<<"\nTime taken to create an adjacency matrix from edge list: "
            <<chrono::duration <double, milli> (diff).count() << 
            " ms\n mat.shape: "<<endl;
 
-   
-  auto start1 = chrono::steady_clock::now();
-  int j;
-  for(int i = 0; i < 100000; i++){
-    //for(int k = 0; k < 100000; k++)
-      j += 1;
-  }
-  auto end1 = chrono::steady_clock::now();
+  cout<<temp_sp_data<<endl;
+  /****************************************************************************/
+  // Line that is causing an issue: NEED TO FIX.
+  // arma::sp_mat Final = arma::conv_to<arma::sp_mat>::from(temp_sp_data);
+  /****************************************************************************/
 
-  diff = end1 - start1;
-
-  cout << chrono::duration <double, milli> (diff).count() << " ms" << endl;
+  //Junk: Don't bother looking here:
   //17 SpMat<T1, T2>(comst arma::Base<arma::uword, T1> &locatioms, comst arma::Base<double, T2> &values, comst bool sort_locatioms)
   //sp_data = arma::sp_mat(arma::mat(data.rows( 0, 1));
   //arma::umat(data.rows( 0, 1)), arma::colvec(arma::mat(data.row(2).t()))
