@@ -73,8 +73,6 @@ int main()
   // cov.save("sparse_covariance");
   // cov.save("sparse_covariance.txt", arma::raw_ascii);
   // cov.save("sparse_covariance.csv", arma::csv_ascii);
-
-  
   // Save the output.
   // data::Save("cov.csv", cov, true);
 }
