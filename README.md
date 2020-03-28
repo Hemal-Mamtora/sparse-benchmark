@@ -1,5 +1,7 @@
 Benchmarking arma::sp_mat in mlpack
 
+Dataset link: [http://networkrepository.com/citeseer.php](http://networkrepository.com/citeseer.php)
+
 Compile:
 g++ src/new.cpp -fopenmp -lmlpack -larmadillo -o bin/new.o
 
