@@ -36,10 +36,19 @@ int main()
            <<chrono::duration <double, milli> (diff).count() << 
            " ms\n mat.shape: "<<endl;
 
-  cout<<temp_sp_data<<endl;
+  // cout<<temp_sp_data<<endl;
+  
+  
+  arma::Mat<arma::u64> dense = arma::Mat<arma::u64>(temp_sp_data);
+  
+  arma::mat dense_double = arma::conv_to<arma::mat>::from(dense);
+
+  arma::sp_mat sparse_double = arma::sp_mat(dense_double);
+  
+  cout<<"All conversions successful"<<endl;
   /****************************************************************************/
   // Line that is causing an issue: NEED TO FIX.
-  arma::sp_mat Final(temp_sp_data);
+  //arma::sp_mat Final(temp_sp_data);
   /****************************************************************************/
 
   //Junk: Don't bother looking here:
