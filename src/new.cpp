@@ -39,7 +39,7 @@ int main()
   cout<<temp_sp_data<<endl;
   /****************************************************************************/
   // Line that is causing an issue: NEED TO FIX.
-  // arma::sp_mat Final = arma::conv_to<arma::sp_mat>::from(temp_sp_data);
+  arma::sp_mat Final(temp_sp_data);
   /****************************************************************************/
 
   //Junk: Don't bother looking here:
