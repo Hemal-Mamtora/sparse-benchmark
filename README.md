@@ -7,6 +7,7 @@ Run:
 ./bin/new.o 
 
 Output(directly from terminal):
+```
 Time taken to load a dense matrix of edge list: 10.4777 ms
  mat.shape: 3x4536
 
@@ -38,3 +39,4 @@ Time taken for : arma::mat * arma::sp_mat: 221.396 ms
 Timing SPARSE arma::sp_mat * arma::mat
 Time taken for : arma::sp_mat * arma::mat: 642.525 ms
  mat.shape: 3244x3244
+```
